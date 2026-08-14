@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+description: Browse The Cloudroom by tag.
+---
+
+<section class="directory-page">
+  <div class="directory-intro">
+    <span class="eyebrow">Index / tags</span>
+    <h1>Find your way around the room.</h1>
+    <p>Every article can carry a few small signals. Pick one and see what has gathered around it.</p>
+  </div>
+
+  {% if site.tags.size > 0 %}
+    <div class="tag-cloud" aria-label="All tags">
+      {% for tag in site.tags %}
+        <a class="tag tag-large" href="#tag-{{ tag[0] | slugify }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+      {% endfor %}
+    </div>
+
+    <div class="tag-directory">
+      {% for tag in site.tags %}
+        <section class="tag-group" id="tag-{{ tag[0] | slugify }}">
+          <div class="section-header"><h2>{{ tag[0] }}</h2><span class="muted">{{ tag[1].size }} {% if tag[1].size == 1 %}entry{% else %}entries{% endif %}</span></div>
+          <ul class="post-list">
+            {% for post in tag[1] %}
+              <li class="post-item">
+                <div class="post-top"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time><span>{{ post.title }}</span></div>
+                <div class="post-body">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 28 }} <a href="{{ post.url | relative_url }}">Read →</a></div>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="panel section-panel"><p>No tags yet. The first transmission will set the tone.</p></div>
+  {% endif %}
+</section>
