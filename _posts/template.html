@@ -1,0 +1,153 @@
+---
+title: "Post title"
+date: 2026-08-14 00:00:00 +0000
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Post title — The Cloudroom." />
+  <title>Post title</title>
+  <style>
+    :root {
+      --bg: #020912;
+      --bg-2: #071b2d;
+      --panel: rgba(10, 20, 31, 0.86);
+      --line: rgba(111, 232, 255, 0.35);
+      --text: #dffcff;
+      --text-soft: #aac8d6;
+      --cyan: #6fe8ff;
+      --pink: #ff67d3;
+      --mint: #93ffd8;
+      --muted: #7f9bb3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 20% 12%, rgba(111, 232, 255, 0.15), transparent 20%),
+        radial-gradient(circle at 80% 24%, rgba(255, 103, 211, 0.12), transparent 16%),
+        linear-gradient(180deg, var(--bg) 0%, #040d18 100%);
+      color: var(--text);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -12% -10%;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(111, 232, 255, 0.08) 24%, rgba(255, 103, 211, 0.12) 52%, transparent 100%),
+        repeating-linear-gradient(115deg, rgba(111, 232, 255, 0.08) 0, rgba(111, 232, 255, 0.08) 2px, transparent 2px, transparent 26px);
+      transform: perspective(900px) rotateX(68deg) translateY(12%) scale(1.25);
+      opacity: 0.8;
+      filter: blur(1px);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(to bottom, rgba(111, 232, 255, 0.05), rgba(111, 232, 255, 0.05) 1px, transparent 2px, transparent 4px);
+      opacity: 0.35;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 20px 90px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article {
+      padding: 28px 24px 30px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(10, 19, 29, 0.9), rgba(4, 12, 17, 0.82));
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26), inset 0 0 0 1px rgba(111, 232, 255, 0.08);
+    }
+
+    .kicker {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      border: 1px solid var(--line);
+      background: rgba(111, 232, 255, 0.05);
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      letter-spacing: -0.05em;
+      line-height: 1.02;
+      color: var(--text);
+    }
+
+    .meta {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .article p {
+      color: var(--text-soft);
+      font-size: 1.04rem;
+      margin: 0 0 20px;
+    }
+
+    .article a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .article a:hover {
+      color: var(--pink);
+    }
+
+    .nav-link {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(111, 232, 255, 0.04);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="article">
+      <div class="kicker">The Cloudroom</div>
+      <h1>Post title</h1>
+      <div class="meta">14 Aug 2026</div>
+
+      <p>Start with a strong opening sentence.</p>
+      <p>Write the body of the post in plain HTML paragraphs. You can keep it simple and elegant, or go more lyrical and atmospheric.</p>
+      <p>Use short paragraphs for rhythm. Add a few reflective lines, concrete details, and a final thought that lands softly.</p>
+      <p>You can also add a <a href="/">link back to the home page</a> or reference other posts if needed.</p>
+
+      <a class="nav-link" href="/">Back to the main room</a>
+    </article>
+  </div>
+</body>
+</html>
