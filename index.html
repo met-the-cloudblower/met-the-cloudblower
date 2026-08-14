@@ -7,7 +7,7 @@ layout: none
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Cloudroom — a personal blog by Met and Pop about life, kink, culture, art, and the strange corners of the internet.">
-<meta name="theme-color" content="#07121c">
+<meta name="theme-color" content="#1a110b">
 <title>The Cloudroom</title>
 <link rel="stylesheet" href="{{ '/assets/css/cloudroom.css' | relative_url }}">
 </head>
@@ -44,7 +44,7 @@ layout: none
 </section>
 <section id="bio" class="bio">
 <article class="panel bio-copy"><h2>Met &amp; Pop</h2><p>This is Met&apos;s blog, and Pop is the pulse behind it. We are a kink couple, a situationship with a very human, very odd little devotion to the strange corners of life.</p><p>We live in the UK, we like a lot of weird stuff, and we enjoy the kind of conversations that start as a joke and become a ritual.</p><p>Met is the dom owner. Pop is the sub puppy. We also have a podcast where we talk about all sorts of subjects while stoned — sex, kink, politics, culture, art, and whatever else keeps the room buzzing.</p></article>
-<article class="panel bio-copy"><h2>Signal</h2><p>Minimal, weird, elegant, and alive. This room is tuned for long-form writing, intimate thoughts, and the late-night internet frequencies that keep us honest.</p></article>
+<article class="panel bio-copy art-panel"><div><h2>Signal</h2><p>Minimal, weird, elegant, and alive. This room is tuned for long-form writing, intimate thoughts, and the late-night internet frequencies that keep us honest.</p></div><img class="cloudroom-art" src="{{ '/assets/images/cloudroom.svg' | relative_url }}" alt="Gold Cloudroom illustration" loading="lazy"></article>
 </section>
 <section class="comment-box panel" aria-labelledby="comment-title"><div class="section-header"><h2 id="comment-title">Leave a note</h2><span class="muted">local only</span></div>
 <form id="commentForm"><div><label for="commentPost">Post</label><select id="commentPost" name="commentPost">{% for post in site.posts %}<option value="{{ post.url | relative_url }}">{{ post.title }}</option>{% else %}<option value="">The Cloudroom</option>{% endfor %}</select></div><div><label for="commentInput">Comment</label><textarea id="commentInput" name="commentInput" maxlength="5000" placeholder="Write something thoughtful, weird, filthy, or lyrical..."></textarea></div><div class="button-row"><button class="button" type="submit">Save note</button></div><div id="commentStatus" class="status" aria-live="polite"></div><p class="local-note">This is a browser-local notebook, not a public comment service. No comment is sent to a server.</p></form>
